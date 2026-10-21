@@ -1,0 +1,11 @@
+{
+  "listen": "127.0.0.1:8080",
+  "issuer": "local-dev",
+  "audience": "go-gateway",
+  "rate": 10,
+  "burst": 20,
+  "routes": [
+    {"prefix": "/api", "backends": ["http://127.0.0.1:9001", "http://127.0.0.1:9002"]},
+    {"prefix": "/billing", "backends": ["http://127.0.0.1:9003"]}
+  ]
+}
